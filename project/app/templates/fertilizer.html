@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>Fertilizer Recommendation</h1>
+    
+    <form method="POST" action="/fertilizer-predict">
+        <label for="cropname">Select Crop:</label>
+        <select name="cropname" id="cropname">
+            <option value="Crop1">Crop1</option>
+            <option value="Crop2">Crop2</option>
+          
+        </select><br><br>
+
+        <label for="nitrogen">Nitrogen (N):</label>
+        <input type="number" name="nitrogen" id="nitrogen"><br><br>
+
+        <label for="phosphorous">Phosphorous (P):</label>
+        <input type="number" name="phosphorous" id="phosphorous"><br><br>
+
+        <label for="pottasium">Potassium (K):</label>
+        <input type="number" name="pottasium" id="pottasium"><br><br>
+
+        <input type="submit" value="Get Fertilizer Recommendation">
+    </form>
+
+    {% if recommendation %}
+    <h2>Fertilizer Recommendation:</h2>
+    <p>{{ recommendation }}</p>
+    {% endif %}
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

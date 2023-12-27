@@ -1,0 +1,80 @@
+{% extends 'layout.html' %} {% block body %}
+
+
+<style>
+  html body {
+    background-color: rgb(206, 206, 228);
+  }
+  
+</style>
+<br /><br />
+  <h2 style="text-align: center; margin: 0px; color: black">
+    <div class="form">
+     <b><h1>Login Here</h></b>
+      <br><br>
+      <form action="{{ url_for('home') }}" method="get">
+      <input type="email" name="email" placeholder="Enter Email Here" style="height:45px;margin-right: 9px; font-size: 22px; width: 500px;" required>
+      <br>
+      <br>
+      <input type="password" name="pass" placeholder="Enter Password Here" style="height:45px;margin-right: 9px; font-size: 22px; width: 500px;" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+      <br>
+      <br>
+      <button style="height: 41px; font-size: 21px; background-color: blue; color:white; font-family: 'Times New Roman', Times, serif ;padding-bottom: 25px;font-weight:bold; width: 300px;">Login</button>
+      <br>
+    </form>
+      <p style="color: black; font-size: 30px;">Don't have an account<br>
+      <a href="#" style="color: black; text-decoration: none;
+      color: #ff7200; font-size: 25px;">Sign up </a> here</a></p>
+      <p style="color: black; font-size: 25px;">Log in with</p>
+    </div>
+    <br>
+    <div class="icons" style="color: black; size: 30px;">
+      <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+  </div>
+
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </h2>
+  <br />
+  <br>
+
+<div style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+  
+
+
+  <form class="form-signin" method=post enctype=multipart/form-data>
+
+    
+  </form> 
+</div>
+
+<script type="text/javascript">
+  function preview_image(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+      var output = document.getElementById('output-image')
+      output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+  }
+  pass 
+  {
+
+  }
+</script>
+
+</div>
+{% endblock %}
